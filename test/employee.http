@@ -1,0 +1,43 @@
+### Список всех сотрудников
+GET /api/employee/getall HTTP/1.1
+Host: localhost:7000
+
+### Список всех сотрудников выбранной кофейни
+GET /api/employee/getall/cafeId/2 HTTP/1.1
+Host: localhost:7000
+
+### Получить одного сотрудника
+GET /api/employee/getone/4 HTTP/1.1
+Host: localhost:7000
+
+### Создать сотрудника
+POST /api/employee/create HTTP/1.1
+Host: localhost:7000
+Content-type: application/json; charset=utf-8
+
+{
+    "name" : "Иван",
+    "surname": "Иванов", 
+    "patronymic": "иванович",
+    "position": "директор",
+    "cafeId" : "1"    
+}
+
+
+### Обновить сорудника
+PUT /api/employee/update/5 HTTP/1.1
+Host: localhost:7000
+Content-type: application/json; charset=utf-8
+
+{
+    "name" : "Петр",
+    "surname": "Петров", 
+    "patronymic": "Петрович",
+    "position": "администратор",
+    "cafeId" : "2"    
+}
+
+### Удалить сотрудника
+DELETE /api/employee/delete/5 HTTP/1.1
+Host: localhost:7000
+

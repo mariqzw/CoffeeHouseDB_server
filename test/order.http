@@ -1,0 +1,41 @@
+### Список всех заказов
+GET /api/order/getall HTTP/1.1
+Host: localhost:7000
+
+### Получить один заказ
+GET /api/order/getone/4 HTTP/1.1
+Host: localhost:7000
+
+### Все заказы выбранного сотрудника
+GET /api/order/getall/employeeId/4 HTTP/1.1
+Host: localhost:7000
+
+### Создать заказ
+POST /api/order/create HTTP/1.1
+Host: localhost:7000
+Content-type: application/json; charset=utf-8
+
+{
+    "date" : "2022-09-22",
+    "clientname": "Кирилл", 
+    "address": "г. Сочи, ул. Речная, д.12",
+    "employeeId" : "1"    
+}
+
+
+### Обновить заказ
+PUT /api/order/update/5 HTTP/1.1
+Host: localhost:7000
+Content-type: application/json; charset=utf-8
+
+{
+    "date" : "2022-03-04",
+    "clientname": "Ярослав", 
+    "address": "г. Сочи, ул. Речная, д.12",
+    "employeeId" : "2"    
+}
+
+### Удалить заказ
+DELETE /api/order/delete/5 HTTP/1.1
+Host: localhost:7000
+

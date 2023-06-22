@@ -1,0 +1,43 @@
+### Список всех поставок
+GET /api/delivery/getall HTTP/1.1
+Host: localhost:7000
+
+### Список всех поставок по количеству
+# GET /api/delivery/getall/2 HTTP/1.1
+# Host: localhost:7000
+
+### Все заказы выбранного сотрудника
+GET /api/delivery/getall/employeeId/7 HTTP/1.1
+Host: localhost:7000
+
+### Получить одну поставку
+GET /api/delivery/getone/5 HTTP/1.1
+Host: localhost:7000
+
+### Создать поставку
+POST /api/delivery/create HTTP/1.1
+Host: localhost:7000
+Content-type: application/json; charset=utf-8
+
+{
+    "date" : "2022-09-22",
+    "quantity": "3", 
+    "employeeId" : "7"    
+}
+
+
+### Обновить поставку
+PUT /api/delivery/update/5 HTTP/1.1
+Host: localhost:7000
+Content-type: application/json; charset=utf-8
+
+{
+    "date" : "2022-03-04",
+    "quantity": "2", 
+    "employeeId" : "7"    
+}
+
+### Удалить поставку
+DELETE /api/delivery/delete/5 HTTP/1.1
+Host: localhost:7000
+
